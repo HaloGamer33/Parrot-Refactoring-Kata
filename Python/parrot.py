@@ -2,6 +2,7 @@ from abc import abstractmethod
 
 
 class Parrot:
+    BASE_SPEED = 12.0
 
     @abstractmethod
     def speed(self):
@@ -12,7 +13,7 @@ class Parrot:
         pass
 
     def _base_speed(self):
-        return 12.0
+        return self.BASE_SPEED
 
 
 class EuropeanParrot(Parrot):
