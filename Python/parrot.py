@@ -1,11 +1,4 @@
-from enum import Enum
 from abc import ABC, abstractmethod
-
-
-class ParrotType(Enum):
-    EUROPEAN = 1
-    AFRICAN = 2
-    NORWEGIAN_BLUE = 3
 
 
 class Parrot:
