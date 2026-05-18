@@ -31,7 +31,15 @@ class AfricanParrot(Parrot):
         self._number_of_coconuts = number_of_coconuts
 
     def speed(self):
-        return max(0, self._base_speed() - self._load_factor() * self._number_of_coconuts)
+        calculated_speed = (
+            self._base_speed()
+            - self._load_factor()
+            * self._number_of_coconuts
+        )
+        if calculated_speed < 0:
+            return 0
+        else:
+            return calculated_speed
 
     def cry(self):
         return "Sqaark!"
