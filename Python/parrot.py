@@ -67,7 +67,7 @@ class AfricanParrot(Parrot):
 
 
 class NorwegianParrot(Parrot):
-    def __init__(self, type_of_parrot, number_of_coconuts, voltage, nailed):
+    def __init__(self, voltage, nailed):
         self._voltage = voltage
         self._nailed = nailed
 
