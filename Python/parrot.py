@@ -11,9 +11,6 @@ class Parrot:
     def cry(self):
         pass
 
-    def _compute_base_speed_for_voltage(self, voltage):
-        return min([24.0, voltage * self._base_speed()])
-
     def _load_factor(self):
         return 9.0
 
@@ -53,3 +50,6 @@ class NorwegianParrot(Parrot):
 
     def cry(self):
         return "Bzzzzzz" if self._voltage > 0 else "..."
+
+    def _compute_base_speed_for_voltage(self, voltage):
+        return min([24.0, voltage * self._base_speed()])
