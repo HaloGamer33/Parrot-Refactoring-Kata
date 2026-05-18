@@ -50,6 +50,8 @@ class AfricanParrot(Parrot):
 
 
 class NorwegianBlueParrot(Parrot):
+    MAXIMUM_SPEED = 24.0
+
     def __init__(self, voltage, nailed):
         self._voltage = voltage
         self._nailed = nailed
@@ -64,4 +66,8 @@ class NorwegianBlueParrot(Parrot):
         return "Bzzzzzz" if self._voltage > 0 else "..."
 
     def _compute_base_speed_for_voltage(self, voltage):
-        return min([24.0, voltage * self._base_speed()])
+        calculated_speed = voltage * self._base_speed()
+        if calculated_speed > self.MAXIMUM_SPEED:
+            return self.MAXIMUM_SPEED
+        else:
+            return calculated_speed
