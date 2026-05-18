@@ -1,5 +1,6 @@
-install:
-    python -m pip install -r requirements.txt
-
 test:
-    python -m pytest
+    ./venv/bin/python -m pytest
+
+install:
+    virtualenv venv
+    ./venv/bin/pip install -r requirements.txt
