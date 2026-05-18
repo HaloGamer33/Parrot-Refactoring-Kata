@@ -40,7 +40,7 @@ class AfricanParrot(Parrot):
         return 9.0
 
 
-class NorwegianParrot(Parrot):
+class NorwegianBlueParrot(Parrot):
     def __init__(self, voltage, nailed):
         self._voltage = voltage
         self._nailed = nailed
