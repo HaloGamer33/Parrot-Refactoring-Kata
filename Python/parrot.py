@@ -28,6 +28,8 @@ class EuropeanParrot(Parrot):
 
 
 class AfricanParrot(Parrot):
+    LOAD_FACTOR = 9.0
+
     def __init__(self, number_of_coconuts):
         self._number_of_coconuts = number_of_coconuts
 
@@ -44,7 +46,7 @@ class AfricanParrot(Parrot):
         return "Sqaark!"
 
     def _load_factor(self):
-        return 9.0
+        return self.LOAD_FACTOR
 
 
 class NorwegianBlueParrot(Parrot):
