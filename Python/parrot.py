@@ -43,7 +43,7 @@ class Parrot:
         return 12.0
 
 
-class EuropeanParrot:
+class EuropeanParrot(Parrot):
     def speed(self):
         return self._base_speed()
 
@@ -51,7 +51,7 @@ class EuropeanParrot:
         return "Sqoork!"
 
 
-class AfricanParrot:
+class AfricanParrot(Parrot):
     def speed(self):
         return max(0, self._base_speed() - self._load_factor() * self._number_of_coconuts)
 
@@ -59,7 +59,7 @@ class AfricanParrot:
         return "Sqaark!"
 
 
-class NorwegianParrot:
+class NorwegianParrot(Parrot):
     def speed(self):
         return 0 if self._nailed else self._compute_base_speed_for_voltage(self._voltage)
 
