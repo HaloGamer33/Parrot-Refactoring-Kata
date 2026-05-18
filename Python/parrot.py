@@ -32,9 +32,7 @@ class AfricanParrot(Parrot):
 
     def speed(self):
         calculated_speed = (
-            self._base_speed()
-            - self._load_factor()
-            * self._number_of_coconuts
+            self._base_speed() - self._load_factor() * self._number_of_coconuts
         )
         if calculated_speed < 0:
             return 0
