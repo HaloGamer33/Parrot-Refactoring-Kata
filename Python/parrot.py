@@ -11,9 +11,6 @@ class Parrot:
     def cry(self):
         pass
 
-    def _load_factor(self):
-        return 9.0
-
     def _base_speed(self):
         return 12.0
 
@@ -38,6 +35,9 @@ class AfricanParrot(Parrot):
 
     def cry(self):
         return "Sqaark!"
+
+    def _load_factor(self):
+        return 9.0
 
 
 class NorwegianParrot(Parrot):
