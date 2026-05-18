@@ -67,6 +67,10 @@ class AfricanParrot(Parrot):
 
 
 class NorwegianParrot(Parrot):
+    def __init__(self, type_of_parrot, number_of_coconuts, voltage, nailed):
+        self._voltage = voltage
+        self._nailed = nailed
+
     def speed(self):
         return 0 if self._nailed else self._compute_base_speed_for_voltage(self._voltage)
 
