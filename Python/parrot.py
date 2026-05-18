@@ -63,7 +63,11 @@ class NorwegianBlueParrot(Parrot):
             return self._compute_base_speed_for_voltage(self._voltage)
 
     def cry(self):
-        return "Bzzzzzz" if self._voltage > 0 else "..."
+        parrot_is_active = self._voltage > 0
+        if parrot_is_active:
+            return "Bzzzzzz"
+        else:
+            return "..."
 
     def _compute_base_speed_for_voltage(self, voltage):
         calculated_speed = voltage * self._base_speed()
